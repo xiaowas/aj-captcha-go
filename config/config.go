@@ -2,6 +2,7 @@ package config
 
 import (
 	"errors"
+	constant "github.com/xiaowas/aj-captcha-go/const"
 	"image/color"
 	"strings"
 )

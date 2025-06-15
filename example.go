@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	config2 "github.com/xiaowas/aj-captcha-go/config"
+	constant "github.com/xiaowas/aj-captcha-go/const"
 	"github.com/xiaowas/aj-captcha-go/service"
 	"image/color"
 	"io/ioutil"
