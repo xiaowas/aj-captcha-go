@@ -1,6 +1,7 @@
 package image
 
 import (
+	constant "github.com/xiaowas/aj-captcha-go/const"
 	"github.com/xiaowas/aj-captcha-go/util"
 	"log"
 	"os"
