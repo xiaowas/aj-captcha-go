@@ -131,21 +131,15 @@ func (i *ImageUtil) SetPixel(rgba color.RGBA, x, y int) {
 
 // Base64 为像素设置颜色
 func (i *ImageUtil) Base64() (string, error) {
-	// 开辟一个新的空buff
 	var buf bytes.Buffer
-	// img写入到buff
-	err := png.Encode(&buf, i.RgbaImage)
 
+	err := png.Encode(&buf, i.RgbaImage)
 	if err != nil {
 		log.Printf("img写入buf失败 err: %v", err)
 		return "", err
 	}
 
-	//开辟存储空间
-	dist := make([]byte, buf.Cap()+buf.Len())
-	// buff转成base64
-	base64.StdEncoding.Encode(dist, buf.Bytes())
-	return string(dist), nil
+	return base64.StdEncoding.EncodeToString(buf.Bytes()), nil
 }
 
 // VagueImage 模糊区域
